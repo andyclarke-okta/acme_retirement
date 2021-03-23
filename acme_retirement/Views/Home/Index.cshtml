@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "MinuteClinic";
+}
+
+<div id="entry-box" class="rounded-6 sign-in-content">
+    <p id="demo"></p>
+    <fieldset style="display:block;">
+        <h2>Acme Financial Retirement Planning</h2>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="docs-section" id="intro">
+                <p class="lead">This is protected content of Sample Application</p>
+                <p class="lead">Available only after successful authentication</p>
+            </div>
+        }
+        else
+        {
+            <div class="docs-section" id="intro">
+                <p class="lead">This is Unprotected landing page of Application</p>
+                <p class="lead">Use Login above to authenticate</p>
+            </div>
+        }
+    </fieldset>
+
+    <div>
+        <p>Explore our financial services and retirement planning options. We have an unwavering commitment to helping you realize your full potential when it comes to planning for the future. For yourself, your family and your community.</p>
+    </div>
+
+
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div>
+            <img src="~/img/saving_and_retirement.jpg" />
+        </div>
+    }
+
+    <div class="card-group">
+        <div class="card">
+            <img src="~/img/early_600.jpg" class="card-img-top" alt="Commercial">
+            <div class="card-body">
+                <h5 class="card-title">Early Planning</h5>
+                <p class="card-text">  </p>
+                @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/couple_workout_600.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Periodic Checkup</h5>
+                <p class="card-text">  </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/lifestyle_600.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Maintaining LifeStyle</h5>
+                <p class="card-text"></p>
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
